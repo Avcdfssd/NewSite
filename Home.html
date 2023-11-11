@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		  
+		  html {
+		  	font-size: 62.5%;
+		  }
+
+		  *{
+		  	box-sizing: border-box;
+		  }
+
+          #myVideo{
+          	
+		   height: auto;
+		   max-width: 100%;
+		   opacity: 30%;
+
+          }  
+
+		 .top {
+
+		 	display: grid;
+		 	grid-template-columns: 15% 25% 60%;
+		 	
+
+		 	
+		 	
+
+		 	min-height: 7.5rem;
+		 	width: 100%;
+		 	background: black;
+		 }
+
+
+
+         .Name {
+         	
+         	
+         	background: black;
+         	
+         }
+
+         .Options {
+           
+           background: black;
+
+         }
+
+         .Search {
+              
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              font-size: 1.5vw;
+
+         }
+
+         .srch {
+
+         	width: auto;
+         	height: 4rem;
+         	font-size: auto;
+         }
+
+         .Options{
+           
+           display: grid;
+           grid-template-columns:15% 15% 15% 15%;
+           column-gap: 7%;
+           place-content: center;
+
+         }
+
+          [class*="opt-"]{
+
+          	font-size: 2vw;
+          	font: bold;
+          	color: white;
+          	cursor: pointer;
+
+
+          }
+
+          .opt-5{
+          	display: none;
+          }
+
+          a:link {
+          	text-decoration: none;
+          	color:white;
+          }
+
+
+          a:visited {
+          	color: white;
+          }
+
+
+        @media (max-height: 400px){
+        	.top {
+        		min-height: 4.5rem;
+        		width: 100%;
+        		
+        	}
+        	.srch {
+        		width: auto;
+         	height: 2rem;
+         	font-size: 0.8vw;
+        	}
+        }
+
+
+
+
+	</style>
+
+</head>
+<body bgcolor="black">
+
+
+<main>
+	
+<div class="top" id="top">
+	
+	<div class="Name">
+        
+        <img src="airline.png">
+		
+	</div>
+
+	<div class="Search">
+		
+		<input type="text" placeholder="Search for Flights" class="srch">
+
+	</div>
+
+	<div class="Options">
+
+		<div class='opt-1' id='1'><a href="Home.html">Home</a></div>
+		<div class='opt-2' id='2'><a href="book.html">Booking</a></div>
+		<div class='opt-3' id='3'><a href="Flights.html">Flights</a></div>
+		<div class='opt-4' id='4'><a href="Login.html">Login</a></div>
+		<div class='opt-5' id='5'><a href="PersonalDetails.html">My Account</a></div>
+		
+	</div>
+
+</div>
+
+<video autoplay muted loop id="myVideo">
+  <source src="air.mp4" type="video/mp4">
+</video>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+   
+   user = sessionStorage.getItem('current');
+
+   if (user != undefined){
+
+   	document.getElementById('5').style.display = "inline";
+   	document.getElementById('4').style.display = 'none';
+
+   }
+
+
+
+
+</script>
+
+</body>
+</html
